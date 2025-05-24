@@ -12,31 +12,3 @@ def recommend_songs(predicted_emotion, song_df, n=5):
     # Return all songs where 'Feeling' exactly matches the predicted emotion
     filtered = song_df[song_df['Feeling'] == emotion]
     return filtered.sample(n=min(n, len(filtered))) if not filtered.empty else pd.DataFrame()
-
-"""
-# src/recommend_songs.py
-import pandas as pd
-
-# as my text data only has 6 emotions im categorizing the musicemotions.csv emotions into those 6
-emotion_to_feelings = {
-    'joy': ['happy', 'joyful', 'uplifting'],
-    'sadness': ['sad', 'melancholy', 'blue'],
-    'anger': ['angry', 'intense', 'aggressive'],
-    'fear': ['dark', 'tense', 'fearful','hate'],
-    'love': ['romantic', 'emotional', 'affectionate'],
-    'surprise': ['surprised', 'exciting', 'unexpected']
-}
-
-def load_song_dataset(path='data/musicemotions.csv'):
-    df = pd.read_csv(path)
-    df['Feeling'] = df['Feeling'].str.lower()
-    return df
-
-def recommend_songs(predicted_emotion, song_df, n=5):
-    if predicted_emotion.lower() not in emotion_to_feelings:
-        return pd.DataFrame()
-
-    feelings = emotion_to_feelings[predicted_emotion.lower()]
-    filtered = song_df[song_df['Feeling'].isin(feelings)]
-    return filtered.sample(n=min(n, len(filtered)))
-"""
