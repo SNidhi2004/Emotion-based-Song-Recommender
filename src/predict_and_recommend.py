@@ -1,30 +1,4 @@
 # src/predict_and_recommend.py
-"""
-import joblib
-from recommend_songs import load_song_dataset, recommend_songs
-
-# Load model and song data
-model = joblib.load('model/emotion_classifier.pkl')
-songs_df = load_song_dataset()
-
-def get_emotion(text):
-    return model.predict([text])[0]
-
-def get_recommendations(text):
-    emotion = get_emotion(text)
-    print(f"🎯 Predicted Emotion: {emotion}\n")
-    recs = recommend_songs(emotion, songs_df)
-    print("🎵 Recommended Songs:")
-    for _, row in recs.iterrows():
-        print(f"- {row['SongName']} ({row['Feeling']})")
-
-# Example
-if __name__ == "__main__":
-    user_input = input("Describe your feelings: ")
-    get_recommendations(user_input)
-"""
-
-# src/predict_and_recommend.py
 
 from transformers import DistilBertForSequenceClassification, DistilBertTokenizerFast
 import torch
