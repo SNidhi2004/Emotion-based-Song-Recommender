@@ -37,16 +37,3 @@ Features
   ```bash
   python src/train_model.py
 ```
-
-**Project File Structure**
-**.
-├── app.py                  # Main Streamlit app
-├── data/
-│   └── mood_history.csv    # Mood history log
-├── model/
-│   ├── distilbert/         # HuggingFace model files
-│   └── label_encoder.pkl   # Trained label encoder
-├── src/
-│   └── recommend_songs.py  # Song recommendation logic
-├── requirements.txt
-└── README.md**
