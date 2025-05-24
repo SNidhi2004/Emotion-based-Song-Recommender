@@ -39,7 +39,7 @@ Features
 ```
 
 **Project File Structure**
-.
+**.
 ├── app.py                  # Main Streamlit app
 ├── data/
 │   └── mood_history.csv    # Mood history log
@@ -49,4 +49,4 @@ Features
 ├── src/
 │   └── recommend_songs.py  # Song recommendation logic
 ├── requirements.txt
-└── README.md
+└── README.md**
